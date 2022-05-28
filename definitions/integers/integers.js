@@ -17,5 +17,8 @@ function isInteger(n){
   }
     return("Checked above to see" +' ' + n + ' ' + "is an integer");
   }
+
+
+  
   
   export { isInteger };
