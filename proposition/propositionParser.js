@@ -1,4 +1,5 @@
 import{isInteger} from '../definitions/integers/integers.js';
+import{evenOdd}  from '../definitions/evenOdd/evenOdd.js';
 
 // Parse proposition
 
