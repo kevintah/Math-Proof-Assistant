@@ -1,8 +1,12 @@
 {
   "name": "math-proof-assistant",
   "main": "whiteBoard/whiteBoard.js",
+  "type": "module",
   "scripts": {
     "start": "node whiteBoard/whiteBoard.js",
     "test": "run unit"
+  },
+  "dependencies": {
+    "readline-promise": "^1.0.5"
   }
 }

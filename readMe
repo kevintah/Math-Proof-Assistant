@@ -1,0 +1,23 @@
+This is a work in progress
+  To begin type:
+
+      npm start
+
+           -- A prompt will appear asking for you to enter a proposition you wish to prove
+      
+           -- Enter the proposition
+
+           -- The system will parse the proposition and write a proof
+
+
+  How to write a proposition
+
+      Number system propositions and proofs (number type checks)
+         
+           # is a(n) numberType 
+              for example
+                 3 is an integer
+      
+          
+
+  
