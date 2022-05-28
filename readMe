@@ -12,12 +12,15 @@ This is a work in progress
 
   How to write a proposition
 
+      proposiion must be at least 4 "words" including numbers and at most 7 words in this prototype version.
+
       Number system propositions and proofs (number type checks)
          
            # is a(n) numberType 
               for example
                  3 is an integer
-      
+      staying in the set proofs 
+           
           
 
   
