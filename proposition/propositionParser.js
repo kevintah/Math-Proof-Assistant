@@ -1,6 +1,6 @@
 import{isInteger} from '../definitions/integers/integers.js';
 import{evenOdd}  from '../definitions/evenOdd/evenOdd.js';
-import{evenOdd}  from '../definitions/evenOdd/evenOdd.js';
+import{divides,sum,product,difference} from '../language/language.js';
 
 
 // Parse proposition
@@ -18,10 +18,30 @@ if(typeof(parsed[0]) =='string' && isNaN(Number(parsed[0])) == false){
   n = Number(parsed[0] && parsed[3]=='integer');
 }
 
+if(parsed != null){
+  for(i = 0; i < parsed.length ; i++){
+      if(parsed[i]== 'sum'){
+        console.log('test1');
+      };
+      if(parsed[i]== 'difference'){
+        console.log('test2');
+      };
+      if(parsed[i]== 'product'){
+        console.log('test3');
+      };
+
+      if(parsed[i]=='divides'){
+        console.log('test4');
+    };
+  }
+}
+
 //write Proof
 var n = Number(parsed[0]);
 console.log(' ' + isInteger(n)) ;
 
 }
+
+
 
 export{integerSubproof};
