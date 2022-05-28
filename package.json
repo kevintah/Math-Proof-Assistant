@@ -1,0 +1,8 @@
+{
+  "name": "math-proof-assistant",
+  "main": "whiteBoard/whiteBoard.js",
+  "scripts": {
+    "start": "node whiteBoard/whiteBoard.js",
+    "test": "run unit"
+  }
+}
