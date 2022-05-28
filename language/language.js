@@ -13,3 +13,5 @@ function product(a,b){
 function difference(a,b){
    return (a - b);
 }
+
+export{divides,sum,product,difference};
