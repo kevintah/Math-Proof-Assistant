@@ -1,6 +1,7 @@
 import{isInteger} from '../definitions/integers/integers.js';
 import{evenOdd}  from '../definitions/evenOdd/evenOdd.js';
 import{divides,sum,product,difference} from '../language/language.js';
+//import{consequence,contradiction,notProposition} from '../Proof/contradictionProof.js';
 
 
 // Parse proposition
@@ -36,6 +37,8 @@ if(parsed != null){
   }
 }
 
+
+
 //write Proof
 var n = Number(parsed[0]);
 console.log(' ' + isInteger(n)) ;
@@ -43,5 +46,37 @@ console.log(' ' + isInteger(n)) ;
 }
 
 
+var consequence ={
 
-export{integerSubproof};
+  "state": true,
+  
+
+};
+
+
+function notProposition(proposition){
+  var toParse = proposition;
+  var parsed = toParse.split(" ");
+
+for( i = parsed.length -1; i>0; i--){
+  parsed[i+1]= parsed[i];
+}
+ parsed[2] = parsed[1];
+ parsed[2] = "not";
+ var stringedParse = parsed.join(" ");
+ console.log(stringedParse);
+}
+
+function contradiction(proposition){
+if( notProposition(proposition)== false){
+    consequence.state = true;
+}
+
+}
+
+
+
+
+
+
+export{integerSubproof,notProposition};

@@ -1,8 +1,5 @@
 
-import{integerSubproof} from '../proposition/propositionParser.js';
-
-
-
+import{integerSubproof,notProposition} from '../proposition/propositionParser.js';
 import rl from "readline-promise";
 const readline = rl.default;
 
@@ -21,9 +18,14 @@ rlp.question(`Enter proposition   `, (proposition) => {
       console.log(`Claim: \n ${proposition}`);
       console.log("Proof:");
       
-      integerSubproof(proposition);      
+      integerSubproof(proposition);  
+      
+      notProposition(proposition);
+      
       // close the stream
       rlp.close();
+
+
  
 
 });
