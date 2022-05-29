@@ -55,6 +55,7 @@ var consequence ={
 
 
 function notProposition(proposition){
+  console.log("--proof by contradition--");
   var toParse = proposition;
   var parsed = toParse.split(" ");
 
@@ -64,12 +65,27 @@ for( i = parsed.length -1; i>0; i--){
  parsed[2] = parsed[1];
  parsed[2] = "not";
  var stringedParse = parsed.join(" ");
- console.log(stringedParse);
+ //console.log(stringedParse);
 }
 
 function contradiction(proposition){
-if( notProposition(proposition)== false){
-    consequence.state = true;
+
+  var toParse = proposition;
+  var parsed = toParse.split(" ");
+
+for( i = parsed.length -1; i>0; i--){
+  parsed[i+1]= parsed[i];
+}
+ parsed[2] = parsed[1];
+ parsed[2] = "not";
+ var stringedParse = parsed.join(" ");
+ console.log("Assume" + " " + stringedParse);
+ var num = Number(parsed[0]);
+if( num % 1 == 0 ){
+    consequence.state = false;
+    console.log(num + " " + "mod 1 is not 0");
+    console.log("we have a contradiction");
+    console.log(proposition + "  " + " is true");
 }
 
 }
@@ -79,4 +95,4 @@ if( notProposition(proposition)== false){
 
 
 
-export{integerSubproof,notProposition};
+export{integerSubproof,notProposition,contradiction};
