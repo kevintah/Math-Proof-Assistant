@@ -38,3 +38,5 @@ rlp.question(`Enter proposition   `, (proposition) => {
 
 
 });
+
+export{proposition};
