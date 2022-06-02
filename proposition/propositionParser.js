@@ -7,11 +7,12 @@ var splitConsequence;
 var regEx = /([^pq!=><)('=>'])/g;
 function statementSplitter(statement){
   //verify syntax
-  while (statement !== null) {
+  while(statement !== null) {
   if(regEx.test(statement) == true){
     console.log('bad syntax');
   }
 }
+ 
 splitStatement = statement.split(" ");
 splitStatement.unshift('if');
 console.log(splitStatement);
@@ -19,12 +20,13 @@ console.log(splitStatement);
 
 function consequenceSplitter(consequence){
   //verify syntax
-  if (consequence !== null){
+  while (consequence !== null){
 
   if(regEx.test(consequence) == true){
     console.log('bad syntax');
   }
  }
+ 
   splitConsequence = consequence.split(" ");
   console.log(splitConsequence);
   }
