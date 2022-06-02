@@ -2,16 +2,17 @@
 //https://en.wikipedia.org/wiki/Peano_axioms
 //https://mathcs.org/analysis/reals/logic/numbers.html
 
-var x,y,z;
+var x;
+var y;
+var z;
 
-const naturalNumbers = new Set();
-naturalNumbers.add(x);
-naturalNumbers.add(y);
-naturalNumbers.add(z);
+var naturalNumbers = [];
+naturalNumbers.push("x");
+naturalNumbers.push("y");
+naturalNumbers.push("z");
 
 
 function successor(x){
-  return x+1;
   console.log("x+1"+ "is the successor of x");
 }
 
@@ -23,18 +24,32 @@ function transitive(x,y,z){
 
 function reflexive(x){
     x==x;
-   console.log("x==x" + "hence reflexive");
+   console.log("x==x" + " " + "hence reflexive");
 }
 
 function closure(x,y){
-   for(x in naturalNumbers){
-     for(y in naturalNumbers){
-       naturalNumbers.add(x+y);
-       naturalNumbers.add(x*y);
-       naturalNumbers.add(x-y);
-       naturalNumbers.add(x/y);
-     }
-   }
+   
+       naturalNumbers.push('x+y');
+       naturalNumbers.push('x*y');
+       naturalNumbers.push('x-y');
+     
+   
+   console.log("if x is a natural number and y is a natural number");
+   console.log('\n');
+   console.log("then (x+y) is a natural number");
+   console.log('\n');
+
+   console.log("then (x*y) is a natural number");
+   console.log('\n');
+
+   console.log("then (x-y) is a natural number");
+   console.log('\n');
+
+
+   console.log("a subset of natural numbers must include" + JSON.stringify(naturalNumbers));
+   console.log('\n');
+   console.log('the sum, difference, product of natural numbers is a natural number')
+
 }
 
 export{successor,transitive,reflexive,closure,x,y,z,naturalNumbers}

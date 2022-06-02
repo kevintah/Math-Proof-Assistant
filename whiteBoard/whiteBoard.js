@@ -12,10 +12,20 @@ const rlp = readline.createInterface({
 
 rlp.question(`Enter proposition   `, (proposition) => {
   //proposition is shown
+      console.log('\n');
       successor(2);
+
+      console.log('\n');
       transitive(x,y,z);
+
+      console.log('\n');
       reflexive(x);
+
+      console.log('\n');
       closure(x,y);
+
+      console.log('\n');
+
       console.log('-----Worksheet-----');
 
       // log user details
@@ -26,7 +36,5 @@ rlp.question(`Enter proposition   `, (proposition) => {
       // close the stream
       rlp.close();
 
-
- 
 
 });
