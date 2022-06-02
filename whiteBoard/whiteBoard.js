@@ -60,11 +60,10 @@ rlp1.close();
 proposition = ( statement +"." +" " + consequence )
 console.log ("Proposition:" );
 console.log("\n");
-console.log(proposition) ;
 
 // claim and direct proof
 console.log("--  proof --");
-console.log(`Claim: \n ${proposition}`);
+console.log(`Claim: \n `+ splitStatement.join(' ') + ' ' +'then' + ' ' +splitConsequence.join(' '));
 console.log("Proof:");
 
 

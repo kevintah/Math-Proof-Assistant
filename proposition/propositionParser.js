@@ -6,6 +6,7 @@ var splitConsequence;
 function statementSplitter(statement){
 
 splitStatement = statement.split(" ");
+splitStatement.unshift('if');
 console.log(splitStatement);
 }
 

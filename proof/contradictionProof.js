@@ -6,7 +6,7 @@ import{statementSplitter,consequenceSplitter,splitConsequence,splitStatement} fr
 var newStatement;
 function assumption(splitStatement){
 //takes statement and negates
-    splitStatement.unshift('negation of:');
+    splitStatement.unshift('Assumption--negation of:');
 
 };   
 
@@ -23,7 +23,8 @@ function contradiction(splitStatement,consequence){
   assumption(splitStatement);
   consequenceOfAssumption(consequence);
   splitConsequence.unshift('then');
-  newStatement = splitStatement.concat(splitConsequence); 
+  newStatement = splitStatement.concat('--consequence:' + splitConsequence); 
+  newStatement = newStatement.join(' ');
   console.log(newStatement);
 }
 
