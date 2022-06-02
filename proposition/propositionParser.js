@@ -4,7 +4,7 @@ import{proposition,statement,consequence} from '../whiteBoard/whiteBoard.js';
 var show = false;
 var splitStatement;
 var splitConsequence;
-var regEx = /([^pq!=><)('=>'])/g;
+var regEx = /([^pq!=><)('=>''not'^v|])/g;
 function statementSplitter(statement){
   //verify syntax
   if(statement !== null && regEx.test(statement) == true){
