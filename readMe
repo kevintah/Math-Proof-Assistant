@@ -10,17 +10,14 @@ This is a work in progress
            -- The system will parse the proposition and write a proof
 
 
-  How to write a proposition
+  ----------------------------------------------
+   --Here is what has been done
+         -added peano axioms for natural numbers
+         -scaffolded (not full coded yet) basic proofs for natural numbers 
+                 transitve,reflexive etc
 
-      proposiion must be at least 4 "words" including numbers and at most 7 words in this prototype version.
-
-      Number system propositions and proofs (number type checks)
-         
-           # is a(n) numberType 
-              for example
-                 3 is an integer
-      staying in the set proofs 
-           
-          
-
-  
+        -scaffolded direct proof and contradiction
+        -scaffolded mechanism to take in proposition
+        
+  --deleted old test/prototype for parser
+                 
