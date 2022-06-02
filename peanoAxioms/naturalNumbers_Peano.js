@@ -37,5 +37,5 @@ function closure(x,y){
    }
 }
 
-export{successor,transitive,reflexive,closure}
+export{successor,transitive,reflexive,closure,x,y,z,naturalNumbers}
 

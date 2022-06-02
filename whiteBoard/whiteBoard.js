@@ -1,7 +1,8 @@
 
-import{integerSubproof,notProposition,contradiction} from '../proposition/propositionParser.js';
+import{notProposition,contradiction} from '../proposition/propositionParser.js';
 import rl from "readline-promise";
-import{} from '../peanoAxioms/naturalNumbers_Peano.js'
+
+import{successor,transitive,reflexive,closure,x,y,z,naturalNumbers} from '../peanoAxioms/naturalNumbers_Peano.js'
 const readline = rl.default;
 
 const rlp = readline.createInterface({
@@ -12,7 +13,10 @@ const rlp = readline.createInterface({
 
 rlp.question(`Enter proposition   `, (proposition) => {
   //proposition is shown
-
+      successor(2);
+      transitive(x,y,z);
+      reflexive(x);
+      closure(x,y);
       console.log('-----Worksheet-----');
 
       // log user details
@@ -27,7 +31,7 @@ rlp.question(`Enter proposition   `, (proposition) => {
       contradiction(proposition);
 
       // close the stream
-      //rlp.close();
+      rlp.close();
 
 
  
