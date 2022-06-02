@@ -1,6 +1,7 @@
 
 import{integerSubproof,notProposition,contradiction} from '../proposition/propositionParser.js';
 import rl from "readline-promise";
+import{} from '../peanoAxioms/naturalNumbers_Peano.js'
 const readline = rl.default;
 
 const rlp = readline.createInterface({
@@ -26,7 +27,7 @@ rlp.question(`Enter proposition   `, (proposition) => {
       contradiction(proposition);
 
       // close the stream
-      rlp.close();
+      //rlp.close();
 
 
  
