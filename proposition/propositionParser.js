@@ -1,38 +1,37 @@
 import{proposition,statement,consequence} from '../whiteBoard/whiteBoard.js';
 
 
-
+var show = false;
 var splitStatement;
 var splitConsequence;
 var regEx = /([^pq!=><)('=>'])/g;
 function statementSplitter(statement){
   //verify syntax
-  while(statement !== null) {
-  if(regEx.test(statement) == true){
+  if(statement !== null && regEx.test(statement) == true){
     console.log('bad syntax');
-  }
-}
- 
+  }else{
+
+show = true;
 splitStatement = statement.split(" ");
 splitStatement.unshift('if');
 console.log(splitStatement);
 }
+}
 
 function consequenceSplitter(consequence){
   //verify syntax
-  while (consequence !== null){
-
-  if(regEx.test(consequence) == true){
+show = false;
+  if(statement !== null && regEx.test(consequence) == true){
     console.log('bad syntax');
-  }
- }
+  }else{
  
+  show = true;
   splitConsequence = consequence.split(" ");
   console.log(splitConsequence);
   }
 
+}
 
 
-
-export{statementSplitter,consequenceSplitter,splitStatement,splitConsequence};
+export{statementSplitter,consequenceSplitter,splitStatement,splitConsequence,show};
 

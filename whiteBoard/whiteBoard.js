@@ -3,7 +3,7 @@ import rl from "readline-promise";
 
 import{successor,transitive,reflexive,closure,x,y,z,naturalNumbers} from '../peanoAxioms/naturalNumbers_Peano.js'
 
-import{statementSplitter,consequenceSplitter,splitStatement,splitConsequence} from  "../proposition/propositionParser.js";
+import{statementSplitter,consequenceSplitter,splitStatement,splitConsequence,show} from  "../proposition/propositionParser.js";
 
 import{assumption,consequenceOfAssumption,contradiction} from '../proof/contradictionProof.js'
 
@@ -23,9 +23,9 @@ const rlp1 = readline.createInterface({
 
 rlp1.question(`Enter statement   `, (statement) => {
      statement = statement;
-
+      if(show == true){
       console.log('\n');
-      successor(2);
+      successor(x);
 
       console.log('\n');
       transitive(x,y,z);
@@ -37,9 +37,9 @@ rlp1.question(`Enter statement   `, (statement) => {
       closure(x,y);
 
       console.log('\n');
-
+      }
       console.log('-----Worksheet-----');
-
+      
       
             
       // close the stream

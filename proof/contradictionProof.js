@@ -6,7 +6,7 @@ import{statementSplitter,consequenceSplitter,splitConsequence,splitStatement} fr
 var newStatement;
 function assumption(splitStatement){
 //takes statement and negates
-    splitStatement.unshift('Assumption--negation of:');
+    splitStatement[0] ='Assumption: not'
 
 };   
 
