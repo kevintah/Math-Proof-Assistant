@@ -20,4 +20,11 @@ This is a work in progress
         -scaffolded mechanism to take in proposition
         
   --deleted old test/prototype for parser
+        - modified parser. It now takes
+                                  -statement
+                                  -consequence
+                              -- and constructs a proposition
+                                  -it returns a claim in English
+                                       -It constructs a primitive type of contradiction
+            -what is next is to contruct a p and q sytem for evolving and unrapping a statement by demorgans laws.
                  
