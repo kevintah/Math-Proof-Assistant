@@ -3,7 +3,10 @@ import rl from "readline-promise";
 
 import{successor,transitive,reflexive,closure,x,y,z,naturalNumbers} from '../peanoAxioms/naturalNumbers_Peano.js'
 
-import{splitter} from  "../proposition/propositionParser.js";
+import{statementSplitter,consequenceSplitter,splitStatement,splitConsequence} from  "../proposition/propositionParser.js";
+
+import{assumption,consequenceOfAssumption,contradiction} from '../proof/contradictionProof.js'
+
 
 const readline = rl.default;
 var proposition;
@@ -40,7 +43,8 @@ rlp1.question(`Enter statement   `, (statement) => {
       
             
       // close the stream
-      splitter(statement);
+      statementSplitter(statement);
+      
       //rlp1.close();
 
 
@@ -48,6 +52,7 @@ rlp1.question(`Enter statement   `, (statement) => {
 
 rlp1.question(`Enter consequence   `, (consequence) => {
     consequence = consequence;
+    consequenceSplitter(consequence);
  //proposition is shown
 
 rlp1.close();
@@ -58,9 +63,15 @@ console.log("\n");
 console.log(proposition) ;
 
 // claim and direct proof
-console.log("-- Direct proof --");
+console.log("--  proof --");
 console.log(`Claim: \n ${proposition}`);
 console.log("Proof:");
+
+
+console.log('--By Contradiction --');
+contradiction(splitStatement,consequence);
+
+
 });
 });
 

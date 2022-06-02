@@ -1,26 +1,30 @@
 //References
 //https://en.wikipedia.org/wiki/Contradiction
 
-var assumption  = (statement) => {
-//Not proposition  (~ at least part of proposition)
-//example: a is a natural number
-//Not proposition is a
+import{statementSplitter,consequenceSplitter,splitConsequence,splitStatement} from '../proposition/propositionParser.js';
+
+var newStatement;
+function assumption(splitStatement){
+//takes statement and negates
+    splitStatement.unshift('negation of:');
 
 };   
 
-assumption;
 
 
-var consequence = (consequence) => {
+function consequenceOfAssumption(splitConsequence){
   //example a natural number times a is also a natural number
-  consequence = consequence;
+  splitConsequence = splitConsequence;
 
 }
 
 
-function contradiction(assumption){
-  if( consequence == false){
-    console.log('we have a contradiction')
-  }
-
+function contradiction(splitStatement,consequence){
+  assumption(splitStatement);
+  consequenceOfAssumption(consequence);
+  splitConsequence.unshift('then');
+  newStatement = splitStatement.concat(splitConsequence); 
+  console.log(newStatement);
 }
+
+export{assumption,consequenceOfAssumption,contradiction}

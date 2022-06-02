@@ -1,12 +1,19 @@
 import{proposition,statement,consequence} from '../whiteBoard/whiteBoard.js';
 
-var split;
+var splitStatement;
+var splitConsequence;
 
-function splitter(proposition){
+function statementSplitter(statement){
 
-split = proposition.split(" ");
-console.log(split);
+splitStatement = statement.split(" ");
+console.log(splitStatement);
 }
 
-export{splitter};
+function consequenceSplitter(consequence){
+
+  splitConsequence = consequence.split(" ");
+  console.log(splitConsequence);
+  }
+
+export{statementSplitter,consequenceSplitter,splitStatement,splitConsequence};
 
