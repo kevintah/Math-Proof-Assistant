@@ -1,1 +1,26 @@
+//References
+//https://en.wikipedia.org/wiki/Contradiction
 
+var assumption  = (proposition) => {
+//Not proposition  (~ at least part of proposition)
+//example: a is a natural number
+//Not proposition is a
+
+};   
+
+assumption;
+
+
+var consequence = (consequence) => {
+  //example a natural number times a is also a natural number
+  consequence = consequence;
+
+}
+
+
+function contradiction(assumption){
+  if( consequence == false){
+    console.log('we have a contradiction')
+  }
+
+}
