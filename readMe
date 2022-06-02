@@ -26,5 +26,5 @@ This is a work in progress
                               -- and constructs a proposition
                                   -it returns a claim in English
                                        -It constructs a primitive type of contradiction
-            -what is next is to contruct a p and q sytem for evolving and unrapping a statement by demorgans laws.
+            -what is next is to contruct a p and q sytem for evolving and unwrapping a statement by demorgans laws.
                  
