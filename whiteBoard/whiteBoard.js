@@ -2,7 +2,11 @@
 import rl from "readline-promise";
 
 import{successor,transitive,reflexive,closure,x,y,z,naturalNumbers} from '../peanoAxioms/naturalNumbers_Peano.js'
+
+import{splitter} from  "../proposition/propositionParser.js";
+
 const readline = rl.default;
+var proposition;
 
 const rlp = readline.createInterface({
     input: process.stdin,
@@ -11,6 +15,7 @@ const rlp = readline.createInterface({
 });
 
 rlp.question(`Enter proposition   `, (proposition) => {
+     proposition = proposition;
   //proposition is shown
       console.log('\n');
       successor(2);
@@ -34,6 +39,7 @@ rlp.question(`Enter proposition   `, (proposition) => {
       console.log("Proof:");
             
       // close the stream
+      splitter(proposition);
       rlp.close();
 
 
