@@ -15,11 +15,7 @@ const rlp1 = readline.createInterface({
     output: process.stdout,
     terminal: true,
 });
-const rlp2 = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    terminal: true,
-});
+
 
 
 rlp1.question(`Enter statement   `, (statement) => {
@@ -45,21 +41,16 @@ rlp1.question(`Enter statement   `, (statement) => {
             
       // close the stream
       splitter(statement);
-      rlp1.close();
+      //rlp1.close();
 
 
-});
+//});
 
-rlp2.question(`Enter consequence   `, (consequence) => {
+rlp1.question(`Enter consequence   `, (consequence) => {
     consequence = consequence;
  //proposition is shown
 
-     rlp2.close();
-
-
-});
-
-
+rlp1.close();
 
 proposition = ( statement +"." +" " + consequence )
 console.log ("Proposition:" );
@@ -70,5 +61,10 @@ console.log(proposition) ;
 console.log("-- Direct proof --");
 console.log(`Claim: \n ${proposition}`);
 console.log("Proof:");
+});
+});
+
+
+
 
 export{proposition,statement,consequence};
