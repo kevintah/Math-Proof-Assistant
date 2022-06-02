@@ -7,16 +7,24 @@ import{splitter} from  "../proposition/propositionParser.js";
 
 const readline = rl.default;
 var proposition;
+var statement;
+var consequence;
 
-const rlp = readline.createInterface({
+const rlp1 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: true,
+});
+const rlp2 = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
     terminal: true,
 });
 
-rlp.question(`Enter proposition   `, (proposition) => {
-     proposition = proposition;
-  //proposition is shown
+
+rlp1.question(`Enter statement   `, (statement) => {
+     statement = statement;
+
       console.log('\n');
       successor(2);
 
@@ -33,16 +41,34 @@ rlp.question(`Enter proposition   `, (proposition) => {
 
       console.log('-----Worksheet-----');
 
-      // log user details
-      console.log("-- Direct proof --");
-      console.log(`Claim: \n ${proposition}`);
-      console.log("Proof:");
+      
             
       // close the stream
-      splitter(proposition);
-      rlp.close();
+      splitter(statement);
+      rlp1.close();
 
 
 });
 
-export{proposition};
+rlp2.question(`Enter consequence   `, (consequence) => {
+    consequence = consequence;
+ //proposition is shown
+
+     rlp2.close();
+
+
+});
+
+
+
+proposition = ( statement +"." +" " + consequence )
+console.log ("Proposition:" );
+console.log("\n");
+console.log(proposition) ;
+
+// claim and direct proof
+console.log("-- Direct proof --");
+console.log(`Claim: \n ${proposition}`);
+console.log("Proof:");
+
+export{proposition,statement,consequence};

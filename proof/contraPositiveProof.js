@@ -1,7 +1,7 @@
 //References
 //https://en.wikipedia.org/wiki/Contraposition
 
-var assumption  = (proposition) => {
+var assumption  = (statement) => {
   //Not proposition  (~ at least part of proposition)
   //example: a is a natural number
   //Not proposition is a

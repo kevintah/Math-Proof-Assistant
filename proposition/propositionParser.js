@@ -1,4 +1,4 @@
-import{proposition} from '../whiteBoard/whiteBoard.js';
+import{proposition,statement,consequence} from '../whiteBoard/whiteBoard.js';
 
 var split;
 
