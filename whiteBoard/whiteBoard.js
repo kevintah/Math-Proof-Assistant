@@ -9,7 +9,7 @@ import{assumption,consequenceOfAssumption,contradiction} from '../proof/contradi
 
 import{contraAssumption,consequenceOfContraAssumption,contrapositive} from '../proof/contraPositiveProof.js'
 
-
+import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 
 const readline = rl.default;
 var proposition;

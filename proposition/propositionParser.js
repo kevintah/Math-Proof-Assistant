@@ -1,10 +1,11 @@
 import{proposition,statement,consequence} from '../whiteBoard/whiteBoard.js';
+import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 
 
 var show = false;
 var splitStatement;
 var splitConsequence;
-var regEx = /([^pq!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
+var regEx = /([^[a-z]!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
 function statementSplitter(statement){
   //verify syntax
   if(statement !== null && regEx.test(statement) == true){
@@ -12,6 +13,9 @@ function statementSplitter(statement){
   }else{
 
 show = true;
+
+deMorgan(statement);
+statement = fullString;
 splitStatement = statement.split(" ");
 splitStatement.unshift('if');
 //console.log(splitStatement);
