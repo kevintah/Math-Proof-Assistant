@@ -31,3 +31,29 @@ This is a work in progress
    -- I think it is better now. I have defined a basic subset of letters that can be used , used regular expressions to do a basic low level syntax checker,
 
           -- Will write demrgans laws to expand expression on next round
+
+
+          ------
+          Outpus is encouraging
+
+            ❯ npm start
+$ node whiteBoard/whiteBoard.js
+Enter statement   !(p^q)
+-----Worksheet-----
+!(p^q)
+!(p^q)
+(!pv!q)
+!(p^q) == (!pv!q)
+(!pv!q)
+Enter consequence   k
+Proposition:
+
+
+--  proof --
+Claim: 
+ if (!pv!q) then k
+Proof:
+--By Contradiction --
+Assumption: not (!pv!q) then k
+--By Contrapositive --
+not (!pv!q) then not k
