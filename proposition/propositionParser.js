@@ -14,7 +14,7 @@ function statementSplitter(statement){
 show = true;
 splitStatement = statement.split(" ");
 splitStatement.unshift('if');
-console.log(splitStatement);
+//console.log(splitStatement);
 }
 }
 
@@ -27,7 +27,7 @@ show = false;
  
   show = true;
   splitConsequence = consequence.split(" ");
-  console.log(splitConsequence);
+  //console.log(splitConsequence);
   }
 
 }

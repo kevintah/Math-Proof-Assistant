@@ -23,7 +23,7 @@ function contradiction(splitStatement,consequence){
   assumption(splitStatement);
   consequenceOfAssumption(consequence);
   splitConsequence.unshift('then');
-  newStatement = splitStatement.concat('--consequence:' + splitConsequence); 
+  newStatement = splitStatement.concat( splitConsequence); 
   newStatement = newStatement.join(' ');
   console.log(newStatement);
 }

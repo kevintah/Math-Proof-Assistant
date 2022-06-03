@@ -7,6 +7,9 @@ import{statementSplitter,consequenceSplitter,splitStatement,splitConsequence,sho
 
 import{assumption,consequenceOfAssumption,contradiction} from '../proof/contradictionProof.js'
 
+import{contraAssumption,consequenceOfContraAssumption,contrapositive} from '../proof/contraPositiveProof.js'
+
+
 
 const readline = rl.default;
 var proposition;
@@ -69,6 +72,9 @@ console.log("Proof:");
 
 console.log('--By Contradiction --');
 contradiction(splitStatement,consequence);
+
+console.log('--By Contrapositive --');
+contrapositive(splitStatement,consequence);
 
 
 });
