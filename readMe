@@ -57,3 +57,15 @@ Proof:
 Assumption: not (!pv!q) then k
 --By Contrapositive --
 not (!pv!q) then not k
+
+------------
+
+Added set stuff
+   --union
+   --intersection
+   --differnce
+         --------
+            - Need to add them to whiteBoard 
+    - added a union computing function
+    - added an intesection compiuting function
+         ---------
