@@ -5,7 +5,7 @@ import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 var show = false;
 var splitStatement;
 var splitConsequence;
-var regEx = /([^[a-z]!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
+var regEx = /([^[a-z][A-Z]!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
 function statementSplitter(statement){
   //verify syntax
   if(statement !== null && regEx.test(statement) == true){
