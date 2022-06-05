@@ -11,6 +11,9 @@ import{contraAssumption,consequenceOfContraAssumption,contrapositive} from '../p
 
 import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 
+import{union,unionWritter,intersection,intersectionWritter,sDifference,fullString2,fullString3} from '../Sets/setAlgebra.js'
+
+
 const readline = rl.default;
 var proposition;
 var statement;
@@ -25,7 +28,13 @@ const rlp1 = readline.createInterface({
 
 
 rlp1.question(`Enter statement   `, (statement) => {
-     statement = statement;
+      unionWritter(statement);
+      statement = fullString2;
+
+      intersectionWritter(statement);
+      statement = fullString3;
+      //statement = fullString3;
+     //statement = statement;
       if(show == true){
       console.log('\n');
       successor(x);
@@ -54,7 +63,12 @@ rlp1.question(`Enter statement   `, (statement) => {
 //});
 
 rlp1.question(`Enter consequence   `, (consequence) => {
-    consequence = consequence;
+    unionWritter(consequence);
+      consequence = fullString2;
+
+      intersectionWritter(consequence);
+      consequence = fullString3;
+    //consequence = consequence;
     consequenceSplitter(consequence);
  //proposition is shown
 
@@ -66,7 +80,7 @@ console.log("\n");
 
 // claim and direct proof
 console.log("--  proof --");
-console.log(`Claim: \n `+ splitStatement.join(' ') + ' ' +'then' + ' ' +splitConsequence.join(' '));
+console.log(`Claim: \n `+ splitStatement.join(' ') + ' ' +'=>' + ' ' +splitConsequence.join(' '));
 console.log("Proof:");
 
 

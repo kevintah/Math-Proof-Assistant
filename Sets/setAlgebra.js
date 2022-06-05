@@ -3,10 +3,12 @@
 
 var A = [9,2,3];
 var B = [1,4,3];
-var regExU = /[A-Z]U[A-Z]/g;
-var regExN = /[A-Z]N[A-Z]/g;
-var regExdiff = /[A-Z]D[A-Z]/g;
-var string = 'dsadAUBdasANFdasd'
+var regExU = /[A-Z] union [A-Z]/g;
+var regExN = /[A-Z] intersection [A-Z]/g;
+var regExdiff = /[A-Z]\/[A-Z]/g;
+//var string = 'dsadAUBdasANFdasd'
+var fullString2;
+var fullString3;
 
 
 var setUnion;
@@ -23,29 +25,30 @@ function union(A,B){
 
 function unionWritter(string){
   var found = string.match(regExU);
-  var fullString2;
+  fullString2;
   if(found != null){
   found = found.toString('');
   var newString= [];
   
   newString[0] = found[0];
-  newString[1] = '\u222A';
-  newString[2] = found[2];
+  newString[1] = ' \u222A ';
+  newString[2] = found[found.length -1];
   
   newString = newString.join('');
   fullString2 = string.replaceAll(regExU, newString); 
-  console.log(string)
-  console.log(found);
-  console.log(newString);
+  //console.log(string)
+  //console.log(found);
+  //console.log(newString);
+  console.log(fullString2);
   }
   else{
     fullString2 = string;
-    console.log(newString);
+    //console.log(newString);
   }
 }
 
-union(A,B);
-unionWritter(string);
+//union(A,B);
+//unionWritter(string);
 
 function intersection(){
     var setIntersection = A.filter(value => B.includes(value));
@@ -54,30 +57,31 @@ function intersection(){
 }
 function intersectionWritter(string){
   var found = string.match(regExN);
-  var fullString2;
+  fullString3;
   if(found != null){
   found = found.toString('');
   var newString= [];
   
   newString[0] = found[0];
-  newString[1] = '\u2229';
-  newString[2] = found[2];
+  newString[1] = ' \u2229 ';
+  newString[2] = found[found.length -1];
   
   newString = newString.join('');
-  fullString2 = string.replaceAll(regExN, newString); 
-  console.log(string)
-  console.log(found);
-  console.log(newString);
+  fullString3 = string.replaceAll(regExN, newString); 
+  //console.log(string)
+  //console.log(found);
+  //console.log(newString);
+  console.log(fullString3);
   }
   else{
-    fullString2 = string;
-    console.log(newString);
+    fullString3 = string;
+    //console.log(newString);
   }
 }
 
 
-intersection(A,B);
-intersectionWritter(string);
+//intersection(A,B);
+//intersectionWritter(string);
 
 
 function sDifference(){
@@ -88,7 +92,7 @@ function sDifference(){
 
 }
 
-sDifference(A,B);
+//sDifference(A,B);
 
-export{union,unionWritter,intersection,intersectionWritter,sDifference}
+export{union,unionWritter,intersection,intersectionWritter,sDifference,fullString2,fullString3}
 

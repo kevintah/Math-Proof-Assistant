@@ -3,34 +3,40 @@
 
 import{statementSplitter,consequenceSplitter,splitConsequence,splitStatement} from '../proposition/propositionParser.js';
 
-var newStatement;
+var newStatement2;
 function contraAssumption(splitStatement){
 //takes statement and negates
-    splitStatement[0] ='not';
+    splitStatement[0] ='!(';
 
 };   
 
 
 
 function consequenceOfContraAssumption(splitConsequence){
-
-  //splitConsequence.unshift('not');
-
-}
-
-
-function contrapositive(splitStatement,consequence){
-  contraAssumption(splitStatement);
-  consequenceOfContraAssumption(consequence);
-  splitConsequence[1] = 'not';
+  splitConsequence =  splitConsequence.split('');
+  splitConsequence.unshift('!(') ;
+  splitConsequence.unshift('=>') ;
+  splitConsequence[splitConsequence.length - 1] = ')';
+  //splitConsequence[1] = splitConsequence[0];
+  //splitConsequence[0] = '!('
   //console.log(splitConsequence);
-  splitConsequence.push(consequence);
-  newStatement = splitStatement.concat(splitConsequence); 
-  newStatement = newStatement.join(' ');
-  console.log(newStatement);
 }
 
-export{contraAssumption,consequenceOfContraAssumption,contrapositive}
+
+function contrapositive(splitStatement,splitConsequence){
+  contraAssumption(splitStatement);
+  consequenceOfContraAssumption(splitConsequence);
+  //splitConsequence[1] = '!';
+  //console.log(splitConsequence);
+  //splitConsequence.push(')');
+  newStatement2 = splitStatement.concat(' => !('+ splitConsequence + ')'); 
+  //console.log(newStatement2);
+  newStatement2= newStatement2.join(' ');
+  console.log(newStatement2);
+  //console.log(splitConsequence);
+}
+
+export{contraAssumption,consequenceOfContraAssumption,contrapositive,newStatement2}
 
 
   
