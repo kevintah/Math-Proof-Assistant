@@ -13,6 +13,8 @@ import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 
 import{union,unionWritter,intersection,intersectionWritter,sDifference,fullString2,fullString3} from '../Sets/setAlgebra.js'
 
+import{universalWritter,existentialWritter,fullString4,fullString5,regExistential,regUniversal} from '../Quantifiers/quantifiers.js'
+
 
 const readline = rl.default;
 var proposition;
@@ -33,6 +35,12 @@ rlp1.question(`Enter statement   `, (statement) => {
 
       intersectionWritter(statement);
       statement = fullString3;
+
+      universalWritter(statement);
+      statement = fullString4;
+
+      existentialWritter(statement);
+      statement = fullString5;
       //statement = fullString3;
      //statement = statement;
       if(show == true){
@@ -68,6 +76,13 @@ rlp1.question(`Enter consequence   `, (consequence) => {
 
       intersectionWritter(consequence);
       consequence = fullString3;
+
+      universalWritter(consequence);
+      consequence = fullString4;
+
+      existentialWritter(consequence);
+      consequence = fullString5;
+      
     //consequence = consequence;
     consequenceSplitter(consequence);
  //proposition is shown
