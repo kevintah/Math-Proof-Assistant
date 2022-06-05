@@ -51,7 +51,7 @@ function existentialWritter(string){
   newString[3] = found[found.length -1];
   
   newString = newString.join('');
-  fullString4 = string.replaceAll(regUniversal, newString); 
+  fullString4 = string.replaceAll(regExistential, newString); 
   //console.log(string)
   //console.log(found);
   //console.log(newString);
