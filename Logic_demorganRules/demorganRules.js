@@ -24,9 +24,9 @@ function deMorgan1(string){
   newString[6] = found[5];
   newString = newString.join('');
   fullString = string.replaceAll(regEx, newString); 
-  console.log(string)
-  console.log(found);
-  console.log(newString);
+  //console.log(string)
+  //console.log(found);
+  //console.log(newString);
   console.log(string + ' == ' + fullString);
   }
   else{
@@ -52,9 +52,9 @@ function deMorgan2(string){
   newString[6] = found[5];
   newString = newString.join('');
   fullString = string.replaceAll(regEx, newString); 
-  console.log(string)
-  console.log(found);
-  console.log(newString);
+  //console.log(string)
+  //console.log(found);
+  //console.log(newString);
   console.log(string + ' == ' + fullString);
   }
   else{
@@ -79,11 +79,11 @@ function deMorgan3(string){
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
-  console.log('newString' + newString);
+  //console.log('newString' + newString);
  
   newString = newString.join('');
   fullString = string.replaceAll(regUniversal, newString); 
-  console.log(string)
+  //console.log(string)
   //console.log(found);
   //console.log(newString);
   console.log(string + ' == ' + fullString);
@@ -116,7 +116,7 @@ function deMorgan4(string){
  
   newString = newString.join('');
   fullString = string.replaceAll(regExistential, newString); 
-  console.log(string)
+  //console.log(string)
   //console.log(found);
   //console.log(newString);
   console.log(string + ' == ' + fullString);
