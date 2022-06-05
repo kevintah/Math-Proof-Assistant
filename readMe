@@ -1,2 +1,32 @@
 This is a work in progress
-     -- syntax and examples will appear below.
+     -- syntax and examples will appear below
+
+
+     ----------------------------
+     Basic Test examples
+---------------------
+1)
+        npm start
+$ node whiteBoard/whiteBoard.js
+Enter statement   !(p|q)
+-----Worksheet-----
+!(p|q)
+!(p,q)
+(!p&!q)
+!(p|q) == (!p&!q)|(!p&!q)
+!(p|q)
+Enter consequence   m
+Proposition:
+
+
+--  proof --
+Claim: 
+ if ( !(p|q) ) => m
+Proof:
+--By Contradiction --
+Assumption: ! ( !(p|q) ) => m
+This is a contradiction
+--By Contrapositive --
+!( !(p|q) )  => !(m)
+
+-------------------------------    

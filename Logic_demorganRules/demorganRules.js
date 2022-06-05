@@ -6,7 +6,7 @@ var string = 'sddsdssgrhs!ds'
 var fullString;
 function deMorgan1(string){
     
-  var regEx = /!\([a-z]v[a-z]\)/g;
+  var regEx = /!\([a-z]|[a-z]\)/g;
   var found = string.match(regEx);
   if(found != null){
 
@@ -16,7 +16,7 @@ function deMorgan1(string){
   newString[0] = found[1];
   newString[1] = found[0];
   newString[2] = found[2];
-  newString[3] = '^';
+  newString[3] = '&';
   newString[4] = '!';
   newString[5] = found[4];
   newString[6] = found[5];
@@ -35,7 +35,7 @@ function deMorgan1(string){
 
 function deMorgan2(string){
 
-  var regEx = /!\([a-z]\^[a-z]\)/g;
+  var regEx = /!\([a-z]\&[a-z]\)/g;
   var found = string.match(regEx);
   if(found != null){
   found = found.toString('');
@@ -44,7 +44,7 @@ function deMorgan2(string){
   newString[0] = found[1];
   newString[1] = found[0];
   newString[2] = found[2];
-  newString[3] = 'v';
+  newString[3] = '|';
   newString[4] = '!';
   newString[5] = found[4];
   newString[6] = found[5];
