@@ -125,7 +125,7 @@ function deMorgan4(string){
 }
 
 
-deMorgan4(string);
+/deMorgan4(string);
 
 
 
