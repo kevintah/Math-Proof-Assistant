@@ -153,11 +153,28 @@ function slick1(saveStatement){
   //universalWritter(found);
   if(found != null){
 
+    found = found.toString('');
+    found = found.split(' ');
+    //console.log(found);
+  
+    var newString= [];
+    
+    newString[0] = 'there';
+    newString[1] = ' exist';
+    newString[2] = ' ' + found[2];
+    newString[3] = ' ' + found[3];
+    newString[4] = ' ' + found[4];
+   
+    //newString = newString.join('');
+
+
+
     console.log('+++++++++++++++++++++++++++++++++++++++++++++'+ consequence2); 
     consequence2Array = consequence2.split('');
     consequence2Array.unshift('!');
     consequence2Array.unshift('^');
-    nar = consequence2Array.join('');
+    var interArr = newString.concat(consequence2Array);
+    nar = interArr.join('');
     
  
 }
