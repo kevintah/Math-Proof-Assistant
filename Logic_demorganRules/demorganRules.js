@@ -4,7 +4,7 @@
 
 import{universalWritter,existentialWritter,fullString4,fullString5,regExistential,regUniversal} from '../Quantifiers/quantifiers.js'
 
-var string = '!(there exist x in Q)';
+//var string = '!(for all x in Q)';
 var fullString;
 function deMorgan1(string){
     
@@ -70,7 +70,7 @@ function deMorgan3(string){
   if(found != null){
   found = found.toString('');
   found = found.split(' ');
-  console.log(found);
+  //console.log(found);
 
   var newString= [];
   
@@ -79,6 +79,7 @@ function deMorgan3(string){
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
+  console.log('newString' + newString);
  
   newString = newString.join('');
   fullString = string.replaceAll(regUniversal, newString); 
@@ -93,7 +94,8 @@ function deMorgan3(string){
 }
 
 
-//deMorgan3(string);
+
+ //deMorgan3(string);
 
 function deMorgan4(string){
   var regExistential = /\!\(there exist [a-z] in [A-Z]\)/g;
@@ -102,11 +104,11 @@ function deMorgan4(string){
   if(found != null){
   found = found.toString('');
   found = found.split(' ');
-  console.log(found);
+  //console.log(found);
 
   var newString= [];
   
-  newString[0] = 'for ';
+  newString[0] = 'for';
   newString[1] = ' all';
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
@@ -135,7 +137,7 @@ function deMorgan(string){
    deMorgan2(string);
    deMorgan3(string);
    deMorgan4(string);
-   console.log(fullString);
+   //console.log(fullString);
 }
 
 //deMorgan(string);

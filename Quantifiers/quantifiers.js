@@ -56,7 +56,7 @@ function existentialWritter(string){
   //console.log(string)
   //console.log(found);
   //console.log(newString);
-  console.log(fullString4);
+  console.log(fullString5);
   }
   else{
     fullString5 = string;
@@ -64,6 +64,7 @@ function existentialWritter(string){
   }
 }
 
-//existentialWritter(string2);
+//existentialWritter(string);
+
 
 export{universalWritter,existentialWritter,fullString4,fullString5,regExistential,regUniversal}
