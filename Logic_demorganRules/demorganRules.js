@@ -75,7 +75,7 @@ function deMorgan3(string){
   var newString= [];
   
   newString[0] = 'there';
-  newString[1] = 'exist';
+  newString[1] = ' exist';
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
@@ -107,7 +107,7 @@ function deMorgan4(string){
   var newString= [];
   
   newString[0] = 'for ';
-  newString[1] = 'all';
+  newString[1] = ' all';
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
@@ -125,7 +125,7 @@ function deMorgan4(string){
 }
 
 
-/deMorgan4(string);
+//deMorgan4(string);
 
 
 

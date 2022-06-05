@@ -16,12 +16,12 @@ import{union,unionWritter,intersection,intersectionWritter,sDifference,fullStrin
 import{universalWritter,existentialWritter,fullString4,fullString5,regExistential,regUniversal} from '../Quantifiers/quantifiers.js'
 
 
-const readline = rl.default;
+var readline = rl.default;
 var proposition;
 var statement;
 var consequence;
 
-const rlp1 = readline.createInterface({
+var rlp1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
     terminal: true,
@@ -30,6 +30,10 @@ const rlp1 = readline.createInterface({
 
 
 rlp1.question(`Enter statement   `, (statement) => {
+
+      deMorgan(statement);
+      statement = fullString;
+
       unionWritter(statement);
       statement = fullString2;
 
@@ -42,7 +46,8 @@ rlp1.question(`Enter statement   `, (statement) => {
       existentialWritter(statement);
       statement = fullString5;
       //statement = fullString3;
-     //statement = statement;
+      //statement = statement;
+
       if(show == true){
       console.log('\n');
       successor(x);
@@ -64,6 +69,8 @@ rlp1.question(`Enter statement   `, (statement) => {
             
       // close the stream
       statementSplitter(statement);
+      console.log(statement)
+      console.log(fullString5)
       
       //rlp1.close();
 
@@ -71,7 +78,10 @@ rlp1.question(`Enter statement   `, (statement) => {
 //});
 
 rlp1.question(`Enter consequence   `, (consequence) => {
-    unionWritter(consequence);
+
+      deMorgan(consequence);
+
+      unionWritter(consequence);
       consequence = fullString2;
 
       intersectionWritter(consequence);
@@ -82,7 +92,7 @@ rlp1.question(`Enter consequence   `, (consequence) => {
 
       existentialWritter(consequence);
       consequence = fullString5;
-      
+
     //consequence = consequence;
     consequenceSplitter(consequence);
  //proposition is shown
