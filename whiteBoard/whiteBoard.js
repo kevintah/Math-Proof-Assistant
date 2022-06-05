@@ -9,7 +9,7 @@ import{assumption,consequenceOfAssumption,contradiction} from '../proof/contradi
 
 import{contraAssumption,consequenceOfContraAssumption,contrapositive} from '../proof/contraPositiveProof.js'
 
-import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
+import{deMorgan,fullString,slick1,slick2,nar,nar2} from '../Logic_demorganRules/demorganRules.js'
 
 import{union,unionWritter,intersection,intersectionWritter,sDifference,fullString2,fullString3} from '../Sets/setAlgebra.js'
 
@@ -19,7 +19,9 @@ import{universalWritter,existentialWritter,fullString4,fullString5,regExistentia
 var readline = rl.default;
 var proposition;
 var statement;
+var saveStatement;
 var consequence;
+var consequence2;
 
 var rlp1 = readline.createInterface({
     input: process.stdin,
@@ -30,6 +32,9 @@ var rlp1 = readline.createInterface({
 
 
 rlp1.question(`Enter statement   `, (statement) => {
+      saveStatement = statement;
+      consequence2 = consequence;
+
 
       deMorgan(statement);
       statement = fullString;
@@ -78,6 +83,17 @@ rlp1.question(`Enter statement   `, (statement) => {
 //});
 
 rlp1.question(`Enter consequence   `, (consequence) => {
+      consequence2 = consequence;
+
+      slick1(saveStatement);
+      if(nar != null){
+            consequence = nar;
+      }
+
+      slick2(saveStatement);
+      if(nar2 != null){
+            consequence = nar2;
+      }
 
       deMorgan(consequence);
 
@@ -93,9 +109,8 @@ rlp1.question(`Enter consequence   `, (consequence) => {
       existentialWritter(consequence);
       consequence = fullString5;
 
-    //consequence = consequence;
-    consequenceSplitter(consequence);
- //proposition is shown
+      //consequence = consequence;
+      consequenceSplitter(consequence);
 
 rlp1.close();
 
@@ -122,4 +137,4 @@ contrapositive(splitStatement,consequence);
 
 
 
-export{proposition,statement,consequence};
+export{proposition,statement,consequence,consequence2,saveStatement};

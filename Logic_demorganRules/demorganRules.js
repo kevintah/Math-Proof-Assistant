@@ -4,8 +4,17 @@
 
 import{universalWritter,existentialWritter,fullString4,fullString5,regExistential,regUniversal} from '../Quantifiers/quantifiers.js'
 
+import{proposition,statement,consequence,saveStatement,consequence2} from '../whiteBoard/whiteBoard.js'
+
+
 //var string = '!(for all x in Q)';
 var fullString;
+var consequence2Array;
+var consequence3Array;
+var nar;
+var nar2;
+
+
 function deMorgan1(string){
     
   var regEx = /!\([a-z]|[a-z]\)/g;
@@ -27,6 +36,7 @@ function deMorgan1(string){
   //console.log(string)
   //console.log(found);
   //console.log(newString);
+  
   console.log(string + ' == ' + fullString);
   }
   else{
@@ -86,6 +96,8 @@ function deMorgan3(string){
   //console.log(string)
   //console.log(found);
   //console.log(newString);
+
+ 
   console.log(string + ' == ' + fullString);
   }
   else{
@@ -127,7 +139,46 @@ function deMorgan4(string){
 }
 
 
+
+
 //deMorgan4(string);
+
+
+
+
+
+function slick1(saveStatement){
+  var regUniversal = /\!\(for all [a-z] in [A-Z]\)/g;
+  var found = saveStatement.match(regUniversal);
+  //universalWritter(found);
+  if(found != null){
+
+    console.log('+++++++++++++++++++++++++++++++++++++++++++++'+ consequence2); 
+    consequence2Array = consequence2.split('');
+    consequence2Array.unshift('!');
+    consequence2Array.unshift('^');
+    nar = consequence2Array.join('');
+    
+ 
+}
+}
+
+function slick2(saveStatement){
+  var regExistential = /\!\(there exist [a-z] in [A-Z]\)/g;
+  var found = saveStatement.match(regExistential);
+  //universalWritter(found);
+  if(found != null){
+
+    console.log('+++++++++++++++++++++++++++++++++++++++++++++'+ consequence2); 
+    consequence3Array = consequence2.split('');
+    consequence3Array.unshift('!');
+    //consequence3Array.unshift('^');
+    nar2 = consequence3Array.join('');
+    
+ 
+}
+}
+
 
 
 
@@ -139,7 +190,9 @@ function deMorgan(string){
    deMorgan4(string);
    //console.log(fullString);
 }
+  
+
 
 //deMorgan(string);
 
-export{deMorgan,fullString}
+export{deMorgan,fullString,slick1,slick2,nar,nar2}
