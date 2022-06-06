@@ -89,7 +89,19 @@ function deMorgan3(string){
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
+
+  
+  //console.log(newString[4]);
   //console.log('newString' + newString);
+
+  var hFix = newString[4];
+  hFix = hFix.toString('');
+  hFix = hFix.split('');
+  hFix = hFix[1];
+
+  newString[4] = ' ' + hFix;
+
+  //console.log(hFix);
  
   newString = newString.join('');
   fullString = string.replaceAll(regUniversal, newString); 
@@ -125,6 +137,19 @@ function deMorgan4(string){
   newString[2] = ' ' + found[2];
   newString[3] = ' ' + found[3];
   newString[4] = ' ' + found[4];
+
+  
+  //console.log(newString[4]);
+  //console.log('newString' + newString);
+
+  var hFix = newString[4];
+  hFix = hFix.toString('');
+  hFix = hFix.split('');
+  hFix = hFix[1];
+
+  newString[4] = ' ' + hFix;
+
+  //console.log(hFix);
  
   newString = newString.join('');
   fullString = string.replaceAll(regExistential, newString); 
@@ -164,6 +189,21 @@ function slick1(saveStatement){
     newString[2] = ' ' + found[2];
     newString[3] = ' ' + found[3];
     newString[4] = ' ' + found[4];
+
+  
+    //console.log(newString[4]);
+    //console.log('newString' + newString);
+  
+    var hFix = newString[4];
+    hFix = hFix.toString('');
+    hFix = hFix.split('');
+    hFix = hFix[1];
+  
+    newString[4] = ' ' + hFix;
+  
+    //console.log(hFix);
+    
+
    
     //newString = newString.join('');
 
