@@ -32,6 +32,22 @@ var rlp1 = readline.createInterface({
 
 
 rlp1.question(`Enter statement   `, (statement) => {
+
+var regEx1 = /[wxyz]/g;
+var regEx2 = /[ABCPQ]/g;
+var regEx3 = /(exist)/g;
+var regEx4 = /(for all)/g;
+var regEx5 = /(union)/g;
+var regEx6 = /(intersection)/g;
+      
+        //verify syntax
+        if(statement !== null && regEx1.test(statement) == false &&  regEx2.test(statement) == false && regEx3.test(statement) == false && regEx4.test(statement) == false && regEx5.test(statement) == false){
+          console.log('bad syntax');
+          return 0;
+        }
+
+
+
       saveStatement = statement;
       consequence2 = consequence;
 
@@ -83,6 +99,15 @@ rlp1.question(`Enter statement   `, (statement) => {
 //});
 
 rlp1.question(`Enter consequence   `, (consequence) => {
+
+     //verify syntax
+     if(consequence !== null && regEx1.test(consequence) == false &&  regEx2.test(consequence) == false && regEx3.test(consequence) == false && regEx4.test(consequence) == false && regEx5.test(consequence) == false){
+      console.log('bad syntax');
+      return 0;
+    }
+
+
+
       consequence2 = consequence;
 
       slick1(saveStatement);

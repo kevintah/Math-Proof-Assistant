@@ -5,10 +5,10 @@ import{deMorgan,fullString} from '../Logic_demorganRules/demorganRules.js'
 var show = false;
 var splitStatement;
 var splitConsequence;
-var regEx = /([^[a-z][A-Z]!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
+var regEx1 = /([^[a-z][A-Z]!=><)('=>''not'^v|'elem''union''intersection''||'&&'])/g;
 function statementSplitter(statement){
   //verify syntax
-  if(statement !== null && regEx.test(statement) == true){
+  if(statement !== null && regEx1.test(statement) == true){
     console.log('bad syntax');
   }else{
 
@@ -26,7 +26,7 @@ splitStatement[splitStatement.length] =')';
 function consequenceSplitter(consequence){
   //verify syntax
 show = false;
-  if(statement !== null && regEx.test(consequence) == true){
+  if(statement !== null && regEx1.test(consequence) == true){
     console.log('bad syntax');
   }else{
  
