@@ -1,32 +1,98 @@
 This is a work in progress
      -- syntax and examples will appear below
-
-
-     ----------------------------
-     Basic Test examples
----------------------
-1)
-        npm start
+ 
+ Example 1
+  P implies Q
+   -- How does the prototype fair?
+         
+           --
+            ~/projects/math-proof-assistant 21s
+❯ npm start
 $ node whiteBoard/whiteBoard.js
-Enter statement   !(p|q)
+Enter statement   P
 -----Worksheet-----
-!(p|q)
-!(p,q)
-(!p&!q)
-!(p|q) == (!p&!q)|(!p&!q)
-!(p|q)
-Enter consequence   m
+P
+P
+Enter consequence   Q
 Proposition:
 
 
 --  proof --
 Claim: 
- if ( !(p|q) ) => m
+ if ( P ) => Q
 Proof:
 --By Contradiction --
-Assumption: ! ( !(p|q) ) => m
+Assumption: ! ( P ) => Q
 This is a contradiction
 --By Contrapositive --
-!( !(p|q) )  => !(m)
+!( P )  => !(Q)
 
--------------------------------    
+    --
+     How does it fair with -- !(there exist x in P) implies M implies all x in Proof
+     /projects/math-proof-assistant
+❯ npm start
+$ node whiteBoard/whiteBoard.js
+Enter statement   !(there exist x in P)
+!(there exist x in P) == (!t&!here exist x in P)
+!(there exist x in P) == for all x in P
+[ 'for', 'all', 'x', 'in', 'P' ]
+ ∀ x in P
+-----Worksheet-----
+ ∀ x in P
+ ∀ x in P
+Enter consequence   M
++++++++++++++++++++++++++++++++++++++++++++++M
+Proposition:
+
+
+--  proof --
+Claim: 
+ if (  ∀ x in P ) => !M
+Proof:
+--By Contradiction --
+Assumption: ! (  ∀ x in P ) => !M
+This is a contradiction
+--By Contrapositive --
+!(  ∀ x in P )  => !(!M)
+
+
+How about !(PvQ) => M == (!P^!Q)
+~/projects/math-proof-assistant
+❯ npm start
+$ node whiteBoard/whiteBoard.js
+Enter statement   !(PvQ)
+!(PvQ)
+!(PvQ)
+(!P^!Q)
+!(PvQ) == (!P^!Q)
+-----Worksheet-----
+!(PvQ)
+!(PvQ)
+(!P^!Q)
+!(PvQ) == (!P^!Q)
+!(PvQ)
+!(PvQ)
+Enter consequence   M
+Proposition:
+
+
+--  proof --
+Claim: 
+ if ( !(PvQ) ) => M
+Proof:
+--By Contradiction --
+Assumption: ! ( !(PvQ) ) => M
+This is a contradiction
+--By Contrapositive --
+!( !(PvQ) )  => !(M)
+
+What about 
+Still working on prototype. As can be seen it can 
+     -almost correctly apply demorgans laws for sets ,
+     -can do P implies Q by contradiction and Contrapositive
+     -can do demorgan for straight logic
+
+  -- Very bugy at this point but work in progress
+
+
+  -- Next step will be implementing mathematics functions and relations

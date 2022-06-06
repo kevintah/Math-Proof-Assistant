@@ -39,9 +39,12 @@ var regEx3 = /(exist)/g;
 var regEx4 = /(for all)/g;
 var regEx5 = /(union)/g;
 var regEx6 = /(intersection)/g;
+var regEx4 = /[v]/g;
+var regEx5 = /[^]/g;
+var regEx6 = /[!]/g;
       
         //verify syntax
-        if(statement !== null && regEx1.test(statement) == false &&  regEx2.test(statement) == false && regEx3.test(statement) == false && regEx4.test(statement) == false && regEx5.test(statement) == false){
+        if(statement !== null && regEx1.test(statement) == false &&  regEx2.test(statement) == false && regEx3.test(statement) == false && regEx4.test(statement) == false && regEx5.test(statement) == false&& regEx6.test(statement) == false && regEx7.test(statement) == false && regEx8.test(statement) == false && regEx9.test(statement) == false){
           console.log('bad syntax');
           return 0;
         }
@@ -100,11 +103,7 @@ var regEx6 = /(intersection)/g;
 
 rlp1.question(`Enter consequence   `, (consequence) => {
 
-     //verify syntax
-     if(consequence !== null && regEx1.test(consequence) == false &&  regEx2.test(consequence) == false && regEx3.test(consequence) == false && regEx4.test(consequence) == false && regEx5.test(consequence) == false){
-      console.log('bad syntax');
-      return 0;
-    }
+     
 
 
 
