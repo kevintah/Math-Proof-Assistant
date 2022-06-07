@@ -86,7 +86,18 @@ This is a contradiction
 --By Contrapositive --
 !( !(PvQ) )  => !(M)
 
-What about 
+
+What about functions ?
+
+currently takes  sets of form  A=[1,2,3,4] B=[4,5,6,7]
+
+          takes  maps of form   map(x => x**2)
+
+    - can check injection
+    - can check surjection 
+    - can check bijection
+     How to use coming up after language is streamlined
+
 Still working on prototype. As can be seen it can 
      -almost correctly apply demorgans laws for sets ,
      -can do P implies Q by contradiction and Contrapositive
