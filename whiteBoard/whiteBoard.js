@@ -117,6 +117,14 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                     set_2=set_2.join('').split(''); 
                   }
                   }
+
+                  
+
+                  
+                  //console.log('set1'+ set_1);
+                  //console.log('set2' +set_2);
+
+                  
                   
                   function getMap(consequence){
                         functionString = consequence.split('').join('');
@@ -126,27 +134,26 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                   function generateSet_2(set_1){
                     getMap(consequence);
                     generatedSet_2 = eval('set_2.'+functionString); 
-                   
-                    console.log(generatedSet_2);
+                    generatedSet_2 = generatedSet_2.join().split(',');
+                    //console.log('test ' + generatedSet_2);
                   }
                   
                   
-                  function checkOnto(set_1,set_2){
+                  function checkOnto(set_1,set_2,generatedSet_2){
                   
-                    if(set_1.length != set_2.length){
-                    
+                        if(generatedSet_2.every(r=> set_2.includes(r)) ==true){                    
                     console.log('f is a  ' + consequence + ' from set1 to set2');
                   
-                    console.log('f is surjective');
+                    console.log('f is surjective or onto');
                   
-                    console.log('f is onto');
+                    console.log('for every y, there is an x such that f(x) = y');
                     }
                   }
 
 
-                  function checkOneToOne(set_1,set_2){
+                  function checkOneToOne(set_1,set_2,generatedSet_2){
                   
-                        if(set_1.length == set_2.length){
+                        if(generatedSet_2.every(r=> set_2.includes(r)) ==true){
                         
                         console.log('f is a  ' + consequence + ' from set1 to set2');
                       
@@ -157,9 +164,9 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                       }
 
 
-                      function checkBijection(set_1,set_2){
+                      function checkBijection(set_1,set_2,generatedSet_2){
                   
-                        if(set_1.length == set_2.length){
+                        if(set_2.every(r=> generatedSet_2.includes(r)) ==true && generatedSet_2.every(r=> set_2.includes(r)) ==true && set_2.length == generatedSet_2.length){ 
                         
                         console.log('f is a  ' + consequence + ' from set1 to set2');
                       
@@ -171,14 +178,17 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                   
                   
              getSets(statement);
-             checkOnto(set_1,set_2);
-             checkOneToOne(set_1,set_2);
-             checkBijection(set_1,set_2);
-             console.log(set_1);
              generateSet_2(set_1);
+             checkOnto(set_1,set_2,generatedSet_2);
+             checkOneToOne(set_1,set_2,generatedSet_2);
+             checkBijection(set_1,set_2,generatedSet_2);
+             //console.log(set_1);
+             //generateSet_2(set_1);
+             console.log(set_1);
              console.log(set_2);
+             console.log(generatedSet_2);
       
-             return rlp1;
+             return ;
             }
       
             

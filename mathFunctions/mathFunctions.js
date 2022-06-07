@@ -6,6 +6,8 @@
 
 //https://math.stackexchange.com/questions/3405533/showing-that-a-map-is-bijective-and-finding-its-inverse
 
+//https://www.cuemath.com/algebra/onto-function/
+
 
 // form 
 

@@ -91,7 +91,35 @@ What about functions ?
 
 currently takes  sets of form  A=[1,2,3,4] B=[4,5,6,7]
 
-          takes  maps of form   map(x => x**2)
+          takes  maps of form   map(x => x*2)
+
+
+
+❯ npm start
+$ node whiteBoard/whiteBoard.js
+Enter statement   A=[1,2,3,4] B=[1,2,3,4]
+Enter consequence   map(x => x*1)
+A=[1,2,3,4] B=[1,2,3,4]
+[ 'A=[1,2,3,4]', 'B=[1,2,3,4]' ]
+A=[1,2,3,4]
+[ 'A', '[1,2,3,4]' ]
+[1,2,3,4]
+[1,2,3,4] [1,2,3,4]
+map(x => x*1)
+f is a  map(x => x*1) from set1 to set2
+f is surjective or onto
+for every y, there is an x such that f(x) = y
+f is a  map(x => x*1) from set1 to set2
+f is injective
+f is one to one
+f is a  map(x => x*1) from set1 to set2
+f is one to one and onto
+f is a bijection
+[ '1', '2', '3', '4' ]
+[ '1', '2', '3', '4' ]
+[ '1', '2', '3', '4' ]
+
+
 
     - can check injection
     - can check surjection 
