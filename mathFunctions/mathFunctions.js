@@ -57,8 +57,13 @@ if(string !== null && regExSet.test(string) == true){
 
 function checkBijection(set_1,set_2){
 
-  if(set_2.every( ai => set_1.includes(ai) ) &&  set_1.every( ai => set_2.includes(ai) )){
-  console.log('f is a bijection');
+  if(set_2.every( ai => set_1.includes(ai) ) &&  set_1.every( ai => set_2.includes(ai) && (set_1.length == set_2.length))){
+  
+  console.log('f(x) = x');
+    
+  console.log('for every x in set1 there is exactly one y in set2');
+
+  console.log(' f is a bijection');
   }
 }
 
