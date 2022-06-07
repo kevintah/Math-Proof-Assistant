@@ -17,9 +17,11 @@
 var string1 = 'A=[1,2,3,4,5,6] B=[1,2,3,4,5,6]';
 var regExSet = /([A-Z][=]\[)([0-9][,])+[0-9]\]/g;
 var regExCSet = /(f:[A-Z]->[A-Z] is )[a-z]+/g;
+var dmap = x => x * 2;
 
 var set_1 = [];
 var set_2 =[];
+var generatedSet_2 =[];
 
 function getSets(string){
 if(string !== null && regExSet.test(string) == true){
@@ -54,16 +56,19 @@ if(string !== null && regExSet.test(string) == true){
 }
 }
 
+function generateSet_2(set_1){
+  generatedSet_2 = set_2.map( dmap);
+  console.log(generatedSet_2);
+}
+
 
 function checkBijection(set_1,set_2){
 
-  if(set_2.every( ai => set_1.includes(ai) ) &&  set_1.every( ai => set_2.includes(ai) && (set_1.length == set_2.length))){
-  
-  console.log('f(x) = x');
+  if(set_1.length == set_2.length){
 
   console.log('f is one to one and onto');
 
-  console.log(' f is a bijection');
+  console.log('f is a bijection');
   }
 }
 
@@ -71,4 +76,5 @@ function checkBijection(set_1,set_2){
 getSets(string1);
 checkBijection(set_1,set_2);
 console.log(set_1);
+generateSet_2(set_1);
 console.log(set_2);
