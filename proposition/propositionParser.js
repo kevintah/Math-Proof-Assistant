@@ -17,7 +17,7 @@ show = true;
 deMorgan(statement);
 statement = fullString;
 splitStatement = statement.split(" ");
-splitStatement.unshift('if (');
+splitStatement.unshift('(');
 splitStatement[splitStatement.length] =')';
 //console.log(splitStatement);
 }
