@@ -42,6 +42,7 @@ var regEx6 = /(intersection)/g;
 var regEx7 = /[v]/g;
 var regEx8 = /[\^]/g;
 var regEx9 = /[!]/g;
+
       
         //verify syntax
         if(statement !== null && regEx1.test(statement) == false &&  regEx2.test(statement) == false && regEx3.test(statement) == false && regEx4.test(statement) == false && regEx5.test(statement) == false&& regEx6.test(statement) == false && regEx7.test(statement) == false && regEx8.test(statement) == false && regEx9.test(statement) == false){

@@ -6,6 +6,7 @@ var B = [1,4,3];
 var regExU = /[A-Z] union [A-Z]/g;
 var regExN = /[A-Z] intersection [A-Z]/g;
 var regExdiff = /[A-Z]\/[A-Z]/g;
+
 //var string = 'dsadAUBdasANFdasd'
 var fullString2;
 var fullString3;
