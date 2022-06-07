@@ -209,7 +209,7 @@ function slick1(saveStatement){
 
 
 
-    console.log('+++++++++++++++++++++++++++++++++++++++++++++'+ consequence2); 
+    console.log(consequence2); 
     consequence2Array = consequence2.split('');
     consequence2Array.unshift('!');
     consequence2Array.unshift('^');
