@@ -51,7 +51,7 @@ rlp1.question(`Enter consequence   `, (consequence) => {
       //var stringMap = 'map(x => x**2)';
       var regExSet = /([A-Z][=]\[)([0-9][,])+[0-9]\]/g;
       var regExCSet = /(f:[A-Z]->[A-Z] is )[a-z]+/g;
-      var regExdmap = /map\(x =>(.*)/g
+      var regExdmap = /map\(x =>(.*)/g;
       
             
               //verify syntax
@@ -70,9 +70,7 @@ rlp1.question(`Enter consequence   `, (consequence) => {
             //universalWritter(found);
             if(foundSet != null){
       
-                  var regExSet = /([A-Z][=]\[)([0-9][,])+[0-9]\]/g;
-                  var regExCSet = /(f:[A-Z]->[A-Z] is )[a-z]+/g;
-                  var regExdmap = /map\(x =>(.*)/g;
+                 
                   
                   
                   var functionString;
@@ -86,18 +84,22 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                   if(string1 !== null && regExSet.test(string1) == true){
                     console.log(string1);
                     var arr1 = string1.split(' ');
+                    console.log(arr1);
                     var arr2_1 = arr1[0];
+                    console.log(arr2_1);
                     var arr2_1_1 = arr2_1.split('=')
+                    console.log(arr2_1_1);
                     var set1 = arr2_1_1[1];
-                    set1 = set1.split('');
+                    set1 = set1.split();
                     set1 = set1[0];
+                    console.log(set1);
                   
                     var arr2 = string1.split(' ');
                     var arr3_1 = arr2[1];
                     var arr3_1_1 = arr3_1.split('=')
                     var set2 = arr3_1_1[1];
                     
-                    set2 = set2.split('');
+                    set2 = set2.split();
                     set2 = set2[0];
                     console.log(set1 + ' ' + set2);
                   
