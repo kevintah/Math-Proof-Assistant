@@ -2,6 +2,7 @@
 //https://www.whitman.edu/mathematics/higher_math_online/section04.01.html
 //https://en.wikipedia.org/wiki/Function_(mathematics)
 //https://en.wikipedia.org/wiki/Homomorphism
+//https://stackoverflow.com/questions/16312528/check-if-an-array-contains-any-element-of-another-array-in-javascript
 
 
 // form 
@@ -13,7 +14,7 @@
 
 //import{proposition,statement,consequence,consequence2,saveStatement} from '../whiteBoard/whiteBoard.js'
 
-var string1 = 'A=[1,2,3,4,5,6] B=[2,3,4,5,6,7]';
+var string1 = 'A=[1,2,3,4,5,6] B=[1,2,3,4,5,6]';
 var regExSet = /([A-Z][=]\[)([0-9][,])+[0-9]\]/g;
 var regExCSet = /(f:[A-Z]->[A-Z] is )[a-z]+/g;
 
@@ -54,6 +55,15 @@ if(string !== null && regExSet.test(string) == true){
 }
 
 
+function checkBijection(set_1,set_2){
+
+  if(set_2.every( ai => set_1.includes(ai) ) &&  set_1.every( ai => set_2.includes(ai) )){
+  console.log('f is a bijection');
+  }
+}
+
+
 getSets(string1);
+checkBijection(set_1,set_2);
 console.log(set_1);
 console.log(set_2);
