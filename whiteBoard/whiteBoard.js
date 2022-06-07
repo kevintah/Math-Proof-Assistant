@@ -131,26 +131,54 @@ rlp1.question(`Enter consequence   `, (consequence) => {
                   }
                   
                   
-                  function checkBijection(set_1,set_2){
+                  function checkOnto(set_1,set_2){
                   
-                    if(set_1.length == set_2.length){
+                    if(set_1.length != set_2.length){
                     
                     console.log('f is a  ' + consequence + ' from set1 to set2');
                   
-                    console.log('f is one to one and onto');
+                    console.log('f is surjective');
                   
-                    console.log('f is a bijection');
+                    console.log('f is onto');
                     }
                   }
+
+
+                  function checkOneToOne(set_1,set_2){
+                  
+                        if(set_1.length == set_2.length){
+                        
+                        console.log('f is a  ' + consequence + ' from set1 to set2');
+                      
+                        console.log('f is injective');
+                      
+                        console.log('f is one to one');
+                        }
+                      }
+
+
+                      function checkBijection(set_1,set_2){
+                  
+                        if(set_1.length == set_2.length){
+                        
+                        console.log('f is a  ' + consequence + ' from set1 to set2');
+                      
+                        console.log('f is one to one and onto');
+                      
+                        console.log('f is a bijection');
+                        }
+                      }    
                   
                   
              getSets(statement);
+             checkOnto(set_1,set_2);
+             checkOneToOne(set_1,set_2);
              checkBijection(set_1,set_2);
              console.log(set_1);
              generateSet_2(set_1);
              console.log(set_2);
       
-             return 0;
+             return rlp1;
             }
       
             

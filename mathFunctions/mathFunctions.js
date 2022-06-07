@@ -4,6 +4,8 @@
 //https://en.wikipedia.org/wiki/Homomorphism
 //https://stackoverflow.com/questions/16312528/check-if-an-array-contains-any-element-of-another-array-in-javascript
 
+//https://math.stackexchange.com/questions/3405533/showing-that-a-map-is-bijective-and-finding-its-inverse
+
 
 // form 
 
