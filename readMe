@@ -145,6 +145,21 @@ f is a bijection
     - can check bijection
      How to use coming up after language is streamlined
 
+-- relations
+
+1,3  is a relation
+32,3  is a relation
+3,2  is a relation
+The below ordered pair was created
+[
+  [ 1, 4 ], [ 2, 5 ],
+  [ 3, 2 ], [ 4, 1 ],
+  [ 5, 4 ], [ 6, 5 ],
+  [ 7, 6 ]
+]
+
+
+
 Still working on prototype. As can be seen it can 
      -almost correctly apply demorgans laws for sets ,
      -can do P implies Q by contradiction and Contrapositive
@@ -153,4 +168,5 @@ Still working on prototype. As can be seen it can
   -- Very bugy at this point but work in progress
 
 
-  -- Next step will be implementing mathematics functions and relations
+
+
