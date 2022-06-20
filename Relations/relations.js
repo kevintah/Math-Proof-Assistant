@@ -14,7 +14,7 @@ var AB = [];
 function createRelation(A,B){
   if(A.length < B.length || A.length == B.length){
 
-  for(var i = 0; i = A.length; i++){
+  for(var i = 0; i < A.length; i++){
 
     AB[i] = [A[i], B[i]];
      
@@ -26,7 +26,7 @@ function createRelation(A,B){
 
 if(B.length < A.length){
 
-  for(var i = 0; i = B.length; i++){
+  for(var i = 0; i < B.length; i++){
 
     AB[i] = [A[i], B[i]];
      
@@ -50,7 +50,7 @@ function checkRelation(C){
 }
 
 
-checkRelation(C);
+//checkRelation(C);
 createRelation(A,B);
 
 export{checkRelation,createRelation}
