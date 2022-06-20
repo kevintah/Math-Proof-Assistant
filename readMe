@@ -1,5 +1,25 @@
+
+
 This is a work in progress
      -- syntax and examples will appear below
+
+     ----------------------------
+
+          can check if injective
+          can check if surjective
+          can check bijection
+          can do set algebra ( union, intersection, difference)
+          can create relations
+          can check if it is a relations
+          understands demorgans laws
+          can proove by Contradiction
+          can proove by Contrapositive
+          can do direct proove
+          can understand quantifiers
+          can understand whole numbers
+          can map from one set to a new set and compare based on assigned map
+
+     ----------------------------
  
  Example 1
   P implies Q
@@ -118,7 +138,6 @@ f is a bijection
 [ '1', '2', '3', '4' ]
 [ '1', '2', '3', '4' ]
 [ '1', '2', '3', '4' ]
-
 
 
     - can check injection
