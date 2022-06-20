@@ -19,8 +19,8 @@ function createRelation(A,B){
     AB[i] = [A[i], B[i]];
      
   }
-  
-   console.log(AB);
+  console.log("The below ordered pair was created");
+  console.log(AB);
 
 }
 
@@ -31,6 +31,7 @@ if(B.length < A.length){
     AB[i] = [A[i], B[i]];
      
   }
+ console.log("The below ordered pair was created");
  console.log(AB);
 }
 
@@ -42,7 +43,10 @@ function checkRelation(C){
   if(Array.isArray(C) == true){
     for(var i = 0; i < C.length; i++ ){
       if(Array.isArray(C[i]) == true && C[i].length == 2){
-        console.log(" This is a relation");
+        console.log(C[i] + "  is a relation");
+      }
+      else{
+        console.log("a non-ordered pair was found so the whole thins is not a relaion");
       }
     }
   }
@@ -50,7 +54,7 @@ function checkRelation(C){
 }
 
 
-//checkRelation(C);
+checkRelation(C);
 createRelation(A,B);
 
 export{checkRelation,createRelation}
