@@ -4,6 +4,22 @@
 //https://javascript.plainenglish.io/data-structures-binary-tree-f8da24fe9602
 //https://codepen.io/arlenross/pen/PozNYbL
 
+
+import rl from "readline-promise";
+var readline = rl.default;
+var rlp1 = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+  terminal: true,
+});
+
+
+
+
+
+
+
+
 var expression = '3*x + 4*x';
 
 class simplify {
@@ -91,9 +107,18 @@ simplifyTree.prototype.collapse = function(node) {
 
 var tree = new simplifyTree(
   new simplify (add, 
-  new simplify(mul,'x',4), 
+  new simplify(div,'x',4), 
   new simplify(sub,14,'y')
   )
 )
 console.log(tree);
 console.log(tree.collapse())
+
+
+rlp1.question(`Please enter algebraic expression`, tree2 => {
+  eval(tree2);
+  console.log(tree2.collapse());
+  rlp1.close();
+});
+
+
