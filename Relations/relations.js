@@ -19,7 +19,7 @@ function createRelation(A,B){
     AB[i] = [A[i], B[i]];
      
   }
-  console.log("The below ordered pair was created");
+  console.log("The below ordered pairs were created");
   console.log(AB);
 
 }
@@ -46,7 +46,7 @@ function checkRelation(C){
         console.log(C[i] + "  is a relation");
       }
       else{
-        console.log("a non-ordered pair was found so the whole thins is not a relaion");
+        console.log("a non-ordered pair was found or no ordered pair was found so the whole this is not a relaion");
       }
     }
   }
