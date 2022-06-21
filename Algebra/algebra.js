@@ -55,9 +55,8 @@ simplifyTree.prototype.collapse = function(node) {
 var tree = new simplifyTree(
   new simplify (add, 
   new simplify(mul,3,4), 
-  new simplify(sub,14,7)
+  new simplify(sub,14,17)
   )
 )
 console.log(tree);
-console.log(tree.of);
 console.log(tree.collapse());
