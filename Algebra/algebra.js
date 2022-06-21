@@ -14,12 +14,6 @@ var rlp1 = readline.createInterface({
 });
 
 
-
-
-
-
-
-
 var expression = '3*x + 4*x';
 
 class simplify {
@@ -116,8 +110,7 @@ console.log(tree.collapse())
 
 
 rlp1.question(`Please enter algebraic expression`, tree2 => {
-  eval(tree2);
-  console.log(tree2.collapse());
+  console.log(tree2);
   rlp1.close();
 });
 
