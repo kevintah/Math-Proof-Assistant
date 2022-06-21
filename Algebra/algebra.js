@@ -15,10 +15,47 @@ this.right=right;
 }
 }
 
-const add = (a, b) => a + b
-const sub = (a, b) => a - b
-const mul = (a, b) => a * b
-const div = (a, b) => a / b
+//const add = (a, b) => a+'+'+ b
+
+
+let add = function (a, b) {
+  if(isNaN(a) !== true && isNaN(b) !== true){
+  return a + b;
+  }
+  else{
+   return a +'+'+ b
+  }
+};
+    
+
+
+//const sub = (a, b) => a +'-'+ b
+let sub = function (a, b) {
+  if(isNaN(a) !== true && isNaN(b) !== true){
+  return a - b;
+  }
+  else{
+   return a +'-'+ b
+  }
+};
+//const mul = (a, b) => a +'*'+ b
+let mul = function (a, b) {
+  if(isNaN(a) !== true && isNaN(b) !== true){
+  return a * b;
+  }
+  else{
+   return a +'*'+ b
+  }
+};
+//const div = (a, b) => a +'/'+ b
+let div = function (a, b) {
+  if(isNaN(a) !== true && isNaN(b) !== true){
+  return a / b;
+  }
+  else{
+   return a +'/'+ b
+  }
+};
 
 class simplifyTree {
 constructor(head) {
@@ -54,8 +91,8 @@ simplifyTree.prototype.collapse = function(node) {
 
 var tree = new simplifyTree(
   new simplify (add, 
-  new simplify(mul,2,4), 
-  new simplify(sub,14,12)
+  new simplify(mul,'x',4), 
+  new simplify(sub,14,'y')
   )
 )
 console.log(tree);
