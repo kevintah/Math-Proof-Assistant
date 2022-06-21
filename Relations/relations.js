@@ -46,7 +46,7 @@ function checkRelation(C){
         console.log(C[i] + "  is a relation");
       }
       else{
-        console.log("a non-ordered pair was found or no ordered pair was found so the whole this is not a relaion");
+        console.log("a non-ordered pair was found or no ordered pair was found so the whole this is not a relation");
       }
     }
   }
