@@ -18,6 +18,22 @@ This is a work in progress
           can understand quantifiers
           can understand whole numbers
           can map from one set to a new set and compare based on assigned map
+          can do symbolic algebra via trees
+
+                  *------- A note on symbolic algebra via trees -------*
+          
+
+~/projects/math-proof-assistant
+❯ node Algebra/algebra.js
+simplifyTree {
+  head: simplify {
+    operation: [Function: add],
+    left: simplify { operation: [Function: mul], left: 'x', right: 4 },
+    right: simplify { operation: [Function: sub], left: 14, right: 'y' }
+  }
+}
+x*4+14-y
+
 
      ----------------------------
  
