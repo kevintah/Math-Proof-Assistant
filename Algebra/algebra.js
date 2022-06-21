@@ -36,7 +36,7 @@ const isNode = n =>
 
 simplifyTree.prototype.collapse = function(node) { 
   node ||= this.head
-  let l, r
+  var l, r
   if(isNode(node.left)) {
     l = this.collapse(node.left)
   }
@@ -54,9 +54,9 @@ simplifyTree.prototype.collapse = function(node) {
 
 var tree = new simplifyTree(
   new simplify (add, 
-  new simplify(mul,3,4), 
-  new simplify(sub,14,17)
+  new simplify(mul,2,4), 
+  new simplify(sub,14,12)
   )
 )
 console.log(tree);
-console.log(tree.collapse());
+console.log(tree.collapse())
